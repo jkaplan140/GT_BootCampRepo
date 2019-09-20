@@ -45,23 +45,27 @@ padding: 20px;
 
 main{
     display: grid;
-    grid-template-columns:  repeat(4, 1fr);
+    grid-template-columns:  repeat(6, 1fr);
     grid-template-rows: repeat(4, 1fr);  
 }
 #profilePhoto {
-    grid-column-start: 1;
+    grid-column: 2/4;
+    grid-row-start: 3
 }
 .nameSubheading {
     border: black solid 1px;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
 }
 .bodyBox {
     justify-content: center;
     align-content: center;
     background-color: lightseagreen;
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    
 }
 .mediaButtonContainer {
     grid-column-start: 2;
