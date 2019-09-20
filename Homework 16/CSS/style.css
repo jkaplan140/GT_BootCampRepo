@@ -45,31 +45,26 @@ padding: 20px;
 
 main{
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "photo nameSubheading"
-    "bodyBox bodyBox"
-    ;
-   
+    grid-template-columns:  repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);  
 }
-.profilePhoto {
-    grid-area: photo;
-    align-content: center;
-    justify-content: center;
+#profilePhoto {
+    grid-column-start: 1;
 }
 .nameSubheading {
-    grid-area: nameSubheading;
     border: black solid 1px;
-    align-content: center;
-    justify-content: center;
-     
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
-.bodyBox{
-    grid-area: bodyBox;
-    /* position: relative; */
-    margin: 45px;
-    background-color: lightseagreen;
-    align-content: center;
+.bodyBox {
     justify-content: center;
+    align-content: center;
+    background-color: lightseagreen;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.mediaButtonContainer {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    border: black 1px solid;
 }
