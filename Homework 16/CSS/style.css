@@ -45,30 +45,49 @@ padding: 20px;
 
 main{
     display: grid;
-    grid-template-columns:  repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);  
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 #profilePhoto {
-    grid-column: 2/4;
-    grid-row-start: 3
+    /* grid-column: 2/4;
+    grid-row-start: 3; */
+    grid-area: "photo";
 }
 .nameSubheading {
     border: black solid 1px;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
+    /* grid-column-start: 3;
+    grid-row-start: 1; */
+    grid-area: "nameSubheading";
+    color: white;
+    background-color: #186AD5
 }
 .bodyBox {
+    grid-area: "bodyBox";
     justify-content: center;
     align-content: center;
     background-color: lightseagreen;
-    grid-column-start: 3;
+    /* grid-column-start: 3;
     grid-column-end: 6;
-    grid-row-start: 3;
+    grid-row-start: 3; */
+
+    color: white;
+    background-color: #48494A;
     
 }
 .mediaButtonContainer {
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-area: "media";
+    display: flex;
+    flex: center;
     border: black 1px solid;
+    background-color: #186AD5;
+    
+}
+.resumeButton {
+    border: black 1px solid;
+    color: white;
+    background-color: #48494A;
+}
+.footer{
+    color: white;
+    
 }
